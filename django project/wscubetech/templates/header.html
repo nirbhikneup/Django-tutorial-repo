@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- Header -->
+<header style="background-color: grey; color: #fff; padding: 10px 20px; text-align: center;">
+    <h1>This is the Header</h1>
+    <p>Customize the look and feel of your header here.</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li class="{% if request.path == '/' %}active{% endif %}"><a href="{% url 'home' %}">Home</a></li>
+        <li class="{% if request.path == '/about-us/' %}active{% endif %}"><a href="{% url 'aboutus' %}">About Us</a></li>
+        <li class="{% if request.path == '/course/' %}active{% endif %}"><a href="{% url 'course' %}">Courses</a></li>
+        <li class="{% if request.path == '/form/' %}active{% endif %}"><a href="{% url 'form' %}">Form</a></li>
+    </ul>
+</nav>
+
+<style>
+    .active {
+        font-weight: bold ;
+        color: yellow;
+    }
+</style>
+
+<!-- Your content here -->
+
+</body>
+</html>

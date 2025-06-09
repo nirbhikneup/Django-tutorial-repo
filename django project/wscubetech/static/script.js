@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add event listener to button
     var button = document.getElementById("clickMeButton");
-    button.addEventListener("click", handleClick);
+    button.addEventListener("Click Here", handleClick);
 });
